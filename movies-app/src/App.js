@@ -17,13 +17,20 @@ const App = () => {
   }, [])
 
   return (
-    <div>
+    <>
+    <header>
+      <input className='search' type='search' placeholder='Buscar...' />
+    </header>
+    <div className='movie-container'>
+
+
     {movies.length > 0 && movies.map((movie) =>
       
       <MovieScreen key={movie.id} {...movie}/>
 
       )}
       </div>
+      </>
   )
 }
 

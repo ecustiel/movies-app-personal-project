@@ -13,6 +13,11 @@ const MovieScreen = ({poster_path, overview, title, vote_average}) => {
                 <span>{vote_average}</span>
             </div>
 
+            <div className='movie-over'>
+                <h2>Overview:</h2>
+                <p>{overview}</p>
+            </div>
+
         </div>
     )
 }
