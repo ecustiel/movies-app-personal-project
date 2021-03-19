@@ -19,7 +19,12 @@ const App = () => {
   return (
     <>
     <header>
-      <input className='search' type='search' placeholder='Buscar...' />
+      <input 
+        className='search' 
+        type='search' 
+        placeholder='Buscar...' 
+
+      />
     </header>
     <div className='movie-container'>
 
