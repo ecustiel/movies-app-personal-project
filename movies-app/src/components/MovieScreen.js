@@ -1,6 +1,16 @@
 import React from 'react';
 import {Api_Imgs} from './helpers/ApiData';
 
+const setVoteColor = (voteColor) => {
+    if(voteColor >= 8) {
+        return 'green';
+    } else if (voteColor >= 6) {
+        return 'orange';
+    } else {
+        return 'red';
+    }
+}
+
 const MovieScreen = ({poster_path, overview, title, vote_average}) => {
     return (
         <div className='movie'>
@@ -10,7 +20,7 @@ const MovieScreen = ({poster_path, overview, title, vote_average}) => {
             />
             <div className='movie-info'>
                 <h3>{title}</h3>
-                <span>{vote_average}</span>
+                <span className={`tag ${setVoteColor(vote_average)}`}>{vote_average}</span>
             </div>
 
             <div className='movie-over'>
