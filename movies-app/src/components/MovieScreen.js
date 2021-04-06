@@ -24,7 +24,7 @@ const MovieScreen = ({poster_path, overview, title, vote_average}) => {
             </div>
 
             <div className='movie-over'>
-                <h2>Overview:</h2>
+                <h2>Review:</h2>
                 <p>{overview}</p>
             </div>
 

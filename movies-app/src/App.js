@@ -2,9 +2,11 @@ import React, {useEffect, useState} from 'react';
 import MovieScreen from './components/MovieScreen';
 import {Api_Call, Api_Search} from './components/helpers/ApiData'
 
+
 const App = () => {
 
   const [movies, setMovies] = useState([]);
+  
   const [searchTerm, setsearchTerm] = useState('')
 
   useEffect(() => {
@@ -16,6 +18,7 @@ const App = () => {
 
   }, [])
 
+ 
   const handleOnSubmit = (e) => {
     e.preventDefault();
 
@@ -38,16 +41,17 @@ const App = () => {
   return (
     <>
     <header>
-    <form onSubmit={handleOnSubmit}>
-      <input 
-        className='search' 
-        type='search' 
-        placeholder='Buscar...' 
-        value={searchTerm}
-        onChange={handleOnChange}
-      />
-    </form>
       
+            <form onSubmit={handleOnSubmit}>
+                <input 
+                    className='search' 
+                    type='search' 
+                    placeholder='Buscar...' 
+                    value={searchTerm}
+                    onChange={handleOnChange}
+                />
+            </form>
+       
     </header>
     <div className='movie-container'>
 
